@@ -21,4 +21,4 @@ Người thực hiện: **Nguyễn Quang Tâm**
 ## Cách chạy project
 1. Clone repo về máy:
    ```bash
-   git clone https://github.com/yourusername/K23CNT1_NguyenQuangTam_NetCore.git
+   git clone https://github.com/nqtam6666/K23CNT1_NguyenQuangTam_NetCore.git

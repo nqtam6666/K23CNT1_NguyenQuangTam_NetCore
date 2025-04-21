@@ -1,0 +1,12 @@
+Overview: NetCore MVC
+
+- Giới thiệu tổng quan (NetCoreMVC)
+- Làm việt với Controller; Router
+- Làm việc với views
+- Làm việc với Models
+- Validation; Annotation
+- Truy/Xuất dữ liệu với EntityFrameWork
+- Layout: Admin/User
+- Session/Cookie/Optimizer
+- Autentication/Authorization
+- WebAPI

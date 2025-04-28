@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "NqtGetProduct";
+}
+
+<h1>NqtGetProduct</h1>
+
+<h2>DỮ LIỆU Lấy từ ViewBag</h2>
+<p>ID sản phẩm: @ViewBag.ProductData.ProductID</p>
+<p>Tên sản phẩm: @ViewBag.productData.ProductName</p>
+<p>Năm sản xuất: @ViewBag.productData.YearRelease</p>
+<p>Giá sản phẩm: @ViewBag.productData.Price</p>
+
+ <h2>DỮ LIỆU Lấy từ ViewData</h2>
+@{
+    var product = ViewData["ProductVD"] as NqtLesson02.Models.NqtProduct;
+}
+<p>Tên sản phẩm: @product.ProductName</p>
+<p>Năm sản xuất: @product.YearRelease</p>
+<p>Giá sản phẩm: @product.Price</p>

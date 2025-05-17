@@ -1,0 +1,27 @@
+﻿
+<div>
+    <h2>Sản phẩm mới nhất</h2>
+    <button id="loadHotProducts" class="btn btn-primary">Load từ Action</button>
+    <div id="hotProductContainer" class="row">
+        @* Nội dung sẽ được load động vào đây *@
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#loadHotProducts").click(function () {
+                $.ajax({
+                    url: '@Url.Action("GetHotProducts", "NqtHome")',
+                    type: 'GET',
+                    success: function (data) {
+                        $("#hotProductContainer").html(data); // Render Partial View
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra khi load sản phẩm.");
+                    }
+                });
+            });
+        });
+    </script>
+}

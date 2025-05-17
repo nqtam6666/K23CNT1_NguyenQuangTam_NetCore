@@ -1,0 +1,50 @@
+﻿<h2>Cú pháp Razor</h2>
+
+
+@{ var total = 1000;}
+@{ var abc = "Message" + "Nguyễn Quang Tâm";}
+
+
+<p>@total</p>
+<p>hello: @abc</p>
+
+
+@{
+	var abcc = "abc";
+	var niceday = DateTime.Now.DayOfWeek;
+	var z = abcc + niceday;
+}
+<p>kkk @z</p>
+
+
+<p>@ViewBag.demo</p>
+
+
+
+
+<h2>If, else</h2>
+
+@{
+	if (total > 100)
+	{
+		<p>Lớn hơn 100</p>
+	}
+	else
+	{
+		<p>Nhỏ hơn 100</p>
+	}
+}
+<h2>For</h2>
+@{
+	for (int i = 0; i< total - 950; i++)
+	{
+		if (i % 2 == 0)
+		{
+			<p>@i là số chẵn</p>
+		}
+		else
+		{
+			<p>@i là số lẻ</p>
+		}
+	}
+}

@@ -1,0 +1,36 @@
+﻿
+@{
+    var accounts = ViewBag.account;
+    ViewData["Title"] = accounts.Name;
+}
+
+<h2>@accounts.Name</h2>
+<div class="row">
+        <div class="col-md-4">
+            <img src="~/@accounts.Avatar" alt="img" />
+        </div>
+           <div class="col-md-8">
+            <h2>Full Name: @accounts.Name</h2>
+            <h3>Email: @accounts.Email</h3>
+            <h3>Phone: @accounts.Phone</h3>
+            <h3>Address: @accounts.Addess</h3>
+            <h3>Bio: @accounts.Bio</h3>
+            <h3>
+                Gender:
+                @if (accounts.Gender == "0")
+                {
+                    <span>Male</span>
+                }
+                else
+                {
+                    <span>Female</span>
+                }
+            </h3>
+        <h3>Birthday: @accounts.Bithday?.ToString("dd/MM/yyyy")</h3>
+            <p>
+                <a asp-controller="NqtAccount" asp-action="NqtIndex" class="btn btn-sm btn-danger">Back to list</a>
+            </p>
+        </div>
+            
+    
+</div>

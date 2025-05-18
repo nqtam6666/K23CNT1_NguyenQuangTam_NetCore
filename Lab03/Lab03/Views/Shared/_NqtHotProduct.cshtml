@@ -1,0 +1,13 @@
+﻿@model List<NqtProduct>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="product-item">
+                <img src="@product.Image" alt="@product.Name" />
+                <h5>@product.Name</h5>
+            </div>
+        </div>
+    }
+</div>

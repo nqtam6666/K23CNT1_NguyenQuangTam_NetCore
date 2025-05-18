@@ -1,0 +1,12 @@
+﻿@model List<NqtProduct>
+
+<h2>Khung sản phẩm nổi bật</h2>
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <img src="~/images/@product.Image" alt="@product.Name" class="img-fluid" />
+            <p>@product.Name</p>
+        </div>
+    }
+</div>

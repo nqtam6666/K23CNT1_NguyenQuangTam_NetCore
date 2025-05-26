@@ -1,0 +1,51 @@
+﻿@model NqtLab06.Models.NqtEmployee
+
+@{
+    ViewData["Title"] = "Thêm nhân viên mới";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <form asp-action="NqtCreateSubmit" asp-controller="NqtEmployee" method="post">
+        @Html.AntiForgeryToken()
+        <div class="form-group mb-3">
+            <label for="NqtName" class="form-label">Họ và Tên</label>
+            <input asp-for="NqtName" class="form-control" placeholder="Nhập họ và tên" required />
+            <span asp-validation-for="NqtName" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="NqtEmail" class="form-label">Email</label>
+            <input asp-for="NqtEmail" class="form-control" type="email" placeholder="Nhập email" required />
+            <span asp-validation-for="NqtEmail" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="NqtBirthDay" class="form-label">Ngày sinh</label>
+            <input asp-for="NqtBirthDay" class="form-control" type="date" required />
+            <span asp-validation-for="NqtBirthDay" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="NqtPhone" class="form-label">Số điện thoại</label>
+            <input asp-for="NqtPhone" class="form-control" placeholder="Nhập số điện thoại" required />
+            <span asp-validation-for="NqtPhone" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="NqtSalary" class="form-label">Lương</label>
+            <input asp-for="NqtSalary" class="form-control" type="number" step="0.01" placeholder="Nhập lương" required />
+            <span asp-validation-for="NqtSalary" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="NqtStatus" class="form-label">Trạng thái</label>
+            <select asp-for="NqtStatus" class="form-control" required>
+                <option value="true">Hoạt động</option>
+                <option value="false">Không hoạt động</option>
+            </select>
+            <span asp-validation-for="NqtStatus" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+        <a href="@Url.Action("NqtListEmployee", "NqtEmployee")" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

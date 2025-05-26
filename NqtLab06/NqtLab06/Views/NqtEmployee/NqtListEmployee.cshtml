@@ -1,0 +1,46 @@
+﻿@model List<NqtLab06.Models.NqtEmployee>
+
+@{
+    ViewData["Title"] = "Danh sách nhân viên";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <a href="@Url.Action("NqtCreate", "NqtEmployee")" class="btn btn-primary mb-3">Thêm nhân viên mới</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ và Tên</th>
+                <th>Email</th>
+                <th>Ngày sinh</th>
+                <th>Số điện thoại</th>
+                <th>Lương</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.NqtID</td>
+                    <td>@employee.NqtName</td>
+                    <td>@employee.NqtEmail</td>
+                    <td>@employee.NqtBirthDay.ToString("dd/MM/yyyy")</td>
+                    <td>@employee.NqtPhone</td>
+                    <td>@employee.NqtSalary.ToString("N0")</td>
+                    <td>@(employee.NqtStatus ? "Hoạt động" : "Không hoạt động")</td>
+                    <td>
+                        <a href="@Url.Action("NqtEdit", "NqtEmployee", new { id = employee.NqtID })" class="btn btn-warning btn-sm">Sửa</a>
+                        <form asp-action="NqtDelete" asp-controller="NqtEmployee" method="post" style="display:inline;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa nhân viên này?');">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@employee.NqtID" />
+                            <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

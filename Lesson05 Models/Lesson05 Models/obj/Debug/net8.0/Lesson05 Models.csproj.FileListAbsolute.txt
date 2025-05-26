@@ -1,0 +1,30 @@
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\appsettings.Development.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\appsettings.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\Lesson05 Models.staticwebassets.runtime.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\Lesson05 Models.staticwebassets.endpoints.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\Lesson05 Models.exe
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\Lesson05 Models.deps.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\Lesson05 Models.runtimeconfig.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\Lesson05 Models.dll
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\bin\Debug\net8.0\Lesson05 Models.pdb
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.AssemblyInfoInputs.cache
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.AssemblyInfo.cs
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.csproj.CoreCompileInputs.cache
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.MvcApplicationPartsAssemblyInfo.cache
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.RazorAssemblyInfo.cache
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.RazorAssemblyInfo.cs
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.sourcelink.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\scopedcss\Views\Shared\_NqtLayout.cshtml.rz.scp.css
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\scopedcss\bundle\Lesson05 Models.styles.css
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\scopedcss\projectbundle\Lesson05 Models.bundle.scp.css
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\staticwebassets.build.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\staticwebassets.development.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.dll
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\refint\Lesson05 Models.dll
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.pdb
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\Lesson05 Models.genruntimeconfig.cache
+D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lesson05 Models\Lesson05 Models\obj\Debug\net8.0\ref\Lesson05 Models.dll

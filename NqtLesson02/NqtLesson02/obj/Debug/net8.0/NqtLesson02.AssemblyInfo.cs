@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NqtLesson02")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe84ee49a22c114ccc3aafd6552e584d6aa1a49e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ca1dc10757f6ea2168126fc55f73937347a36a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("NqtLesson02")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NqtLesson02")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

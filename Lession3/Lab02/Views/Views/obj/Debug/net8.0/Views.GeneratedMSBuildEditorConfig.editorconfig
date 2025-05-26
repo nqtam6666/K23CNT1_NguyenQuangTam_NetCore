@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Views
+build_property.RootNamespace = Views
+build_property.ProjectDir = D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lession3\Views\Views\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\.NetCore\K23CNT1_NguyenQuangTam_NetCore\Lession3\Views\Views
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtAccount/NqtIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0QWNjb3VudFxOcXRJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtAccount/NqtProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0QWNjb3VudFxOcXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtHome/NqtDemo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0SG9tZVxOcXREZW1vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtHome/NqtIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0SG9tZVxOcXRJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtHome/NqtPrivacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0SG9tZVxOcXRQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtHome/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0SG9tZVxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtProduct/NqtIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0UHJvZHVjdFxOcXRJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtProduct/NqtProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0UHJvZHVjdFxOcXRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtShared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0U2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtShared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0U2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtAccount/_NqtLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0QWNjb3VudFxfTnF0TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-120c9j2l4n
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtHome/_NqtLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0SG9tZVxfTnF0TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-rn3i2yiha6
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtProduct/_NqtLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0UHJvZHVjdFxfTnF0TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-kz8knxjq0w
+
+[D:/.NetCore/K23CNT1_NguyenQuangTam_NetCore/Lession3/Views/Views/Views/NqtShared/_NqtLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnF0U2hhcmVkXF9OcXRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ck2y0zh2j9

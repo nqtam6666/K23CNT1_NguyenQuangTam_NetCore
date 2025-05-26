@@ -1,0 +1,18 @@
+﻿﻿
+    @{
+        ViewData["Title"] = "Thông tin member";
+        var NqtMember = ViewBag.NqtMember as Lesson05_Models.Models.DataModels.NqtMember;
+
+    }
+
+
+
+    <div class="alert alert-danger">
+        <h1>Thông tin member</h1>
+        <hr />
+        <p>Member Id: @NqtMember.NqtMemberId</p>
+        <p>UserName:@NqtMember.NqtUserName</p>
+        <p>FullName: @NqtMember.NqtFullName</p>
+        <p>Password:  @NqtMember.NqtPassword </p>
+        <p>Email:  @NqtMember.NqtEmail </p>
+    </div>

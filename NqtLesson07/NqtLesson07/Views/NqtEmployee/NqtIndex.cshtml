@@ -1,0 +1,86 @@
+﻿@model IEnumerable<NqtLesson07.Models.NqtEmployee>
+
+@{
+    ViewData["Title"] = "Tạo mới nhân viên";
+}
+
+<h1>NqtIndex</h1>
+
+<p>
+    <a asp-action="NqtCreate" class="btn btn-info">Thêm mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtBirthDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtBirthDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtStatus)
+                    @if(item.NqtStatus)
+                    {
+                        @:Đang làm
+                    }
+                    else
+                    {
+                        @:Nghỉ làm
+                    }
+            </td>
+                <td class="text-center">
+                    <a href="@Url.Action("NqtEdit", new { id = item.NqtID })" class="btn btn-sm btn-primary me-1" title="Sửa">
+                        <i class="fas fa-edit"></i> Sửa
+                    </a>
+                    <a href="@Url.Action("NqtDetail", new { id = item.NqtID })" class="btn btn-sm btn-info me-1" title="Chi tiết">
+                        <i class="fas fa-info-circle"></i> Chi tiết
+                    </a>
+                    <a href="@Url.Action("NqtDelete", new { id = item.NqtID })" class="btn btn-sm btn-danger" title="Xoá" onclick="return confirm('Bạn có chắc muốn xóa?');">
+                        <i class="fas fa-trash-alt"></i> Xoá
+                    </a>
+                </td>
+
+        </tr>
+}
+    </tbody>
+</table>

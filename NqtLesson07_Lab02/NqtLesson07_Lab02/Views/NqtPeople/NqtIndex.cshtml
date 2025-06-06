@@ -1,0 +1,89 @@
+﻿@model IEnumerable<NqtLesson07_Lab02.Models.NqtPeople>
+
+@{
+    ViewData["Title"] = "NqtIndex";
+}
+
+<h1>NqtIndex</h1>
+
+<p>
+    <a asp-action="NqtCreate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtAvatar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtBirthday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtGender)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtAddress)
+            </td>
+            <td>
+                @*@Html.DislayFor(modelItem => item.NqtAvatar)*@
+                <img src="@item.NqtAvatar" alt="@item.NqtName" style="width:4rem"></img>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtBirthday)
+            </td>
+                <td>
+                    @if (item.NqtGender == 0)
+                    {
+                        <span>Nam</span>
+                    }
+                    else if (item.NqtGender == 1)
+                    {
+                        <span>Nữ</span>
+                    }
+                    else
+                    {
+                        <span>Khác</span>
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "NqtEdit", new { id = item.NqtID /* id=item.PrimaryKey */ }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Details", "NqtDetails", new { id = item.NqtID/* id=item.PrimaryKey */ }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Delete", "NqtDelete", new { id = item.NqtID/* id=item.PrimaryKey */ }, new { @class = "btn btn-danger" })
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

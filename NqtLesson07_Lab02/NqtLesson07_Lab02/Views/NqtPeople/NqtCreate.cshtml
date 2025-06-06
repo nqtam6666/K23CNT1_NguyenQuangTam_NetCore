@@ -1,0 +1,76 @@
+﻿@model NqtLesson07_Lab02.Models.NqtPeople
+
+@{
+    ViewData["Title"] = "NqtCreate";
+}
+
+<h1>NqtCreate</h1>
+
+<h4>NqtPeople</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NqtCreate" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NqtID" class="control-label"></label>
+                <input asp-for="NqtID" class="form-control" />
+                <span asp-validation-for="NqtID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtName" class="control-label"></label>
+                <input asp-for="NqtName" class="form-control" />
+                <span asp-validation-for="NqtName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtEmail" class="control-label"></label>
+                <input asp-for="NqtEmail" class="form-control" />
+                <span asp-validation-for="NqtEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPhone" class="control-label"></label>
+                <input asp-for="NqtPhone" class="form-control" />
+                <span asp-validation-for="NqtPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtAddress" class="control-label"></label>
+                <input asp-for="NqtAddress" class="form-control" />
+                <span asp-validation-for="NqtAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtAvatar" class="control-label"></label>
+                <input asp-for="NqtAvatar" type="file" class="form-control" />
+                <span asp-validation-for="NqtAvatar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtBirthday" class="control-label"></label>
+                <input asp-for="NqtBirthday" class="form-control" />
+                <span asp-validation-for="NqtBirthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtBio" class="control-label"></label>
+                <input asp-for="NqtBio" class="form-control" />
+                <span asp-validation-for="NqtBio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtGender" class="control-label"></label>
+                <div>
+                    <input type="radio" asp-for="NqtGender" value="0" /> <label for="gMale">Male</label>
+                    <input type="radio" asp-for="NqtGender" value="1" /> <label for="gFemale">Female</label>
+                </div>
+                <span asp-validation-for="NqtGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

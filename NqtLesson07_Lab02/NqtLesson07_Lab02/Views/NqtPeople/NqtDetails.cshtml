@@ -1,0 +1,87 @@
+﻿@model NqtLesson07_Lab02.Models.NqtPeople
+
+@{
+    ViewData["Title"] = "NqtDetails";
+}
+
+<h1>NqtDetails</h1>
+
+<div>
+    <h4>NqtPeople</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtPhone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtPhone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtAddress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtAvatar)
+        </dt>
+        <dd class="col-sm-10">
+            @if (!string.IsNullOrEmpty(Model.NqtAvatar))
+            {
+                var baseUrl = "https://localhost:7187"; // Domain cơ bản
+                var correctedPath = Model.NqtAvatar.Replace("/NqtPeople/NqtDetails", "").TrimStart('/'); // Loại bỏ phần không cần thiết và chuẩn hóa
+                var finalUrl = $"{baseUrl}/{correctedPath}"; // Tạo đường dẫn hoàn chỉnh
+                                                                    <img src="@finalUrl" alt="Avatar of @(Model.NqtName ?? "user")" style="width:4rem" />
+            }
+            else
+            {
+                <span>No avatar available</span>
+            }
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtBirthday)
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.NqtBirthday != DateTime.MinValue ? Model.NqtBirthday.ToString("dd/MM/yyyy") : "Not specified")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtGender)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.NqtGender == 0)
+            {
+                <span>Nam</span>
+            }
+            else if (Model.NqtGender == 1)
+            {
+                <span>Nữ</span>
+            }
+            else
+            {
+                <span>Khác</span>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("NqtEdit", "NqtEdit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="NqtIndex">Back to List</a>
+</div>

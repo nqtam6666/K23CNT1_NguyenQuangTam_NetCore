@@ -15,15 +15,15 @@ namespace NqtLesson08.Controllers
             new NqtAccount
             {
                 NqtId = 1,
-                NqtFullName = "Nguyễn Văn A",
-                NqtEmail = "vana@example.com",
-                NqtPhone = "0909123456",
+                NqtFullName = "Nguyễn Quang Tâm",
+                NqtEmail = "nguyenquangtam6666@gmail.com",
+                NqtPhone = "0961138440",
                 NqtAddress = "Hà Nội",
                 NqtAvatar = "/images/avatar1.jpg",
-                NqtBirthday = new DateTime(1995, 5, 20),
+                NqtBirthday = new DateTime(2005, 6, 26),
                 NqtGender = "Nam",
                 NqtPassword = "123456",
-                NqtFacebook = "https://facebook.com/nguyenvana"
+                NqtFacebook = "https://facebook.com/nqtam6666"
             },
             new NqtAccount
             {

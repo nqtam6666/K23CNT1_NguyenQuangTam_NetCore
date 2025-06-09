@@ -1,0 +1,78 @@
+﻿@model NqtLesson08.Models.NqtAccount
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Create Account</h1>
+<h4>NqtAccount</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NqtCreate" method="post">
+            @Html.AntiForgeryToken()
+
+            <!-- Hiển thị tất cả lỗi validation -->
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="NqtFullName" class="control-label"></label>
+                <input asp-for="NqtFullName" class="form-control" />
+                <span asp-validation-for="NqtFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtEmail" class="control-label"></label>
+                <input asp-for="NqtEmail" class="form-control" />
+                <span asp-validation-for="NqtEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPhone" class="control-label"></label>
+                <input asp-for="NqtPhone" class="form-control" />
+                <span asp-validation-for="NqtPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtAddress" class="control-label"></label>
+                <input asp-for="NqtAddress" class="form-control" />
+                <span asp-validation-for="NqtAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtAvatar" class="control-label"></label>
+                <input asp-for="NqtAvatar" class="form-control" />
+                <span asp-validation-for="NqtAvatar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtBirthday" class="control-label"></label>
+                <input asp-for="NqtBirthday" class="form-control" type="date" />
+                <span asp-validation-for="NqtBirthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtGender" class="control-label"></label>
+                <select asp-for="NqtGender" class="form-control">
+                    <option value="">Chọn giới tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+                <span asp-validation-for="NqtGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPassword" class="control-label"></label>
+                <input asp-for="NqtPassword" class="form-control" type="password" />
+                <span asp-validation-for="NqtPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtFacebook" class="control-label"></label>
+                <input asp-for="NqtFacebook" class="form-control" placeholder="https://facebook.com/yourprofile" />
+                <span asp-validation-for="NqtFacebook" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="NqtIndex">Back to List</a>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<NqtLesson08_ThucHanh.Models.NqtProduct>
+
+@{
+    ViewData["Title"] = "NqtIndex";
+}
+
+<h1>NqtIndex</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NqtId)</th>
+            <th>@Html.DisplayNameFor(model => model.NqtName)</th>
+            <th>@Html.DisplayNameFor(model => model.NqtPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.NqtSalePrice)</th>
+            <th>@Html.DisplayNameFor(model => model.NqtImage)</th>
+            <th>@Html.DisplayNameFor(model => model.NqtDescription)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.NqtId)</td>
+                <td>@Html.DisplayFor(modelItem => item.NqtName)</td>
+                <td>@Html.DisplayFor(modelItem => item.NqtPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.NqtSalePrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.NqtImage)</td>
+                <td>@Html.DisplayFor(modelItem => item.NqtDescription)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.NqtId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.NqtId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.NqtId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+﻿@model NqtLesson08_ThucHanh.Models.NqtProduct
+
+@{
+    ViewData["Title"] = "NqtEdit";
+}
+
+<h1>NqtEdit</h1>
+
+<h4>NqtProduct</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NqtEdit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NqtId" class="control-label"></label>
+                <input asp-for="NqtId" class="form-control" readonly />
+                <span asp-validation-for="NqtId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtName" class="control-label"></label>
+                <input asp-for="NqtName" class="form-control" />
+                <span asp-validation-for="NqtName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPrice" class="control-label"></label>
+                <input asp-for="NqtPrice" class="form-control" />
+                <span asp-validation-for="NqtPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtSalePrice" class="control-label"></label>
+                <input asp-for="NqtSalePrice" class="form-control" />
+                <span asp-validation-for="NqtSalePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtImage" class="control-label">Upload Image</label>
+                <input asp-for="NqtImage" type="file" class="form-control" />
+                <span asp-validation-for="NqtImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtDescription" class="control-label"></label>
+                <textarea asp-for="NqtDescription" class="form-control"></textarea>
+                <span asp-validation-for="NqtDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

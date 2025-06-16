@@ -1,0 +1,71 @@
+﻿@model NqtLesson09.Models.NqtBook
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>NqtBook</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NqtBookId" class="control-label"></label>
+                <input asp-for="NqtBookId" class="form-control" />
+                <span asp-validation-for="NqtBookId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtTitle" class="control-label"></label>
+                <input asp-for="NqtTitle" class="form-control" />
+                <span asp-validation-for="NqtTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtAuthor" class="control-label"></label>
+                <input asp-for="NqtAuthor" class="form-control" />
+                <span asp-validation-for="NqtAuthor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtRelease" class="control-label"></label>
+                <input asp-for="NqtRelease" class="form-control" />
+                <span asp-validation-for="NqtRelease" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPrice" class="control-label"></label>
+                <input asp-for="NqtPrice" class="form-control" />
+                <span asp-validation-for="NqtPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtDescription" class="control-label"></label>
+                <input asp-for="NqtDescription" class="form-control" />
+                <span asp-validation-for="NqtDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPicture" class="control-label"></label>
+                <input asp-for="NqtPicture" class="form-control" />
+                <span asp-validation-for="NqtPicture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPublisherId" class="control-label"></label>
+                <select asp-for="NqtPublisherId" class ="form-control" asp-items="ViewBag.NqtPublisherId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtCategoryId" class="control-label"></label>
+                <select asp-for="NqtCategoryId" class ="form-control" asp-items="ViewBag.NqtCategoryId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<NqtLesson09.Models.NqtBook>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtAuthor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtRelease)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtPicture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtPublisher)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtAuthor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtRelease)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtPicture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtCategory.NqtCategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtPublisher.NqtPublisherId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NqtBookId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NqtBookId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NqtBookId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

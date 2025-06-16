@@ -1,0 +1,49 @@
+﻿@model NqtLesson09.Models.NqtOrderDetail
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>NqtOrderDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NqtOrderDetailId" />
+            <div class="form-group">
+                <label asp-for="NqtOrderId" class="control-label"></label>
+                <select asp-for="NqtOrderId" class="form-control" asp-items="ViewBag.NqtOrderId"></select>
+                <span asp-validation-for="NqtOrderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtBookId" class="control-label"></label>
+                <select asp-for="NqtBookId" class="form-control" asp-items="ViewBag.NqtBookId"></select>
+                <span asp-validation-for="NqtBookId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtQuantity" class="control-label"></label>
+                <input asp-for="NqtQuantity" class="form-control" />
+                <span asp-validation-for="NqtQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtPrice" class="control-label"></label>
+                <input asp-for="NqtPrice" class="form-control" />
+                <span asp-validation-for="NqtPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

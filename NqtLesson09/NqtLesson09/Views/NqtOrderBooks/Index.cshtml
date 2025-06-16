@@ -1,0 +1,71 @@
+﻿@model IEnumerable<NqtLesson09.Models.NqtOrderBook>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtOrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtReceiveAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtReceivePhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtOrderReceive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtAccount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtOrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtReceiveAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtReceivePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtOrderReceive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtAccount.NqtAccountId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NqtOrderId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NqtOrderId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NqtOrderId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

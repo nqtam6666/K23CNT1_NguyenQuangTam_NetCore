@@ -1,0 +1,47 @@
+﻿@model IEnumerable<NqtLesson09.Models.NqtPublisher>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtPublisherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NqtAddress)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtPublisherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NqtAddress)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NqtPublisherId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NqtPublisherId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NqtPublisherId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

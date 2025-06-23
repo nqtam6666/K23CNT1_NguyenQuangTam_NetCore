@@ -4,64 +4,78 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>NqtOrderBook</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NqtOrderId" class="control-label"></label>
-                <input asp-for="NqtOrderId" class="form-control" />
-                <span asp-validation-for="NqtOrderId" class="text-danger"></span>
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4>Create NqtOrderBook</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtOrderId" class="control-label"></label>
+                            <input asp-for="NqtOrderId" class="form-control" readonly />
+                            <span asp-validation-for="NqtOrderId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtOrderDate" class="control-label"></label>
+                            <input asp-for="NqtOrderDate" class="form-control" type="date" />
+                            <span asp-validation-for="NqtOrderDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtAccountId" class="control-label"></label>
+                            <select asp-for="NqtAccountId" class="form-select" asp-items="ViewBag.NqtAccountId">
+                                <option value="">Select Account</option>
+                            </select>
+                            <span asp-validation-for="NqtAccountId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtReceiveAddress" class="control-label"></label>
+                            <textarea asp-for="NqtReceiveAddress" class="form-control" rows="3"></textarea>
+                            <span asp-validation-for="NqtReceiveAddress" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtReceivePhone" class="control-label"></label>
+                            <input asp-for="NqtReceivePhone" class="form-control" type="tel" />
+                            <span asp-validation-for="NqtReceivePhone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtOrderReceive" class="control-label"></label>
+                            <input asp-for="NqtOrderReceive" class="form-control" type="date" />
+                            <span asp-validation-for="NqtOrderReceive" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtNote" class="control-label"></label>
+                            <textarea asp-for="NqtNote" class="form-control" rows="3"></textarea>
+                            <span asp-validation-for="NqtNote" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="NqtStatus" class="control-label"></label>
+                            <select asp-for="NqtStatus" class="form-select">
+                                <option value="">Select Status</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Confirmed">Confirmed</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="Cancelled">Cancelled</option>
+                            </select>
+                            <span asp-validation-for="NqtStatus" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-4">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <a asp-action="Index" class="btn btn-secondary ms-2">Back to List</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="NqtOrderDate" class="control-label"></label>
-                <input asp-for="NqtOrderDate" class="form-control" />
-                <span asp-validation-for="NqtOrderDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NqtAccountId" class="control-label"></label>
-                <select asp-for="NqtAccountId" class ="form-control" asp-items="ViewBag.NqtAccountId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="NqtReceiveAddress" class="control-label"></label>
-                <input asp-for="NqtReceiveAddress" class="form-control" />
-                <span asp-validation-for="NqtReceiveAddress" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NqtReceivePhone" class="control-label"></label>
-                <input asp-for="NqtReceivePhone" class="form-control" />
-                <span asp-validation-for="NqtReceivePhone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NqtOrderReceive" class="control-label"></label>
-                <input asp-for="NqtOrderReceive" class="form-control" />
-                <span asp-validation-for="NqtOrderReceive" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NqtNote" class="control-label"></label>
-                <input asp-for="NqtNote" class="form-control" />
-                <span asp-validation-for="NqtNote" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NqtStatus" class="control-label"></label>
-                <input asp-for="NqtStatus" class="form-control" />
-                <span asp-validation-for="NqtStatus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

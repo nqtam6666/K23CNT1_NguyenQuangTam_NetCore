@@ -1,0 +1,64 @@
+﻿@model NguyenQuangTam_2310900093.Models.NqtEmployee
+
+@{
+    ViewData["Title"] = "Thêm nhân viên mới";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Thêm nhân viên mới</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="NqtCreate" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="NqtEmpName" class="form-label">Tên nhân viên</label>
+                            <input asp-for="NqtEmpName" class="form-control" required />
+                            <span asp-validation-for="NqtEmpName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NqtEmpLevel" class="form-label">Cấp bậc</label>
+                            <select asp-for="NqtEmpLevel" class="form-select" required>
+                                <option value="">-- Chọn cấp bậc --</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Member">Member</option>
+                            </select>
+                            <span asp-validation-for="NqtEmpLevel" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NqtEmpStartDate" class="form-label">Ngày bắt đầu</label>
+                            <input asp-for="NqtEmpStartDate" class="form-control" type="date" required />
+                            <span asp-validation-for="NqtEmpStartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NqtEmpStatus" class="form-label">Trạng thái</label>
+                            <div class="form-check">
+                                <input asp-for="NqtEmpStatus" type="checkbox" class="form-check-input" checked />
+                                <label class="form-check-label" asp-for="NqtEmpStatus">
+                                    Show
+                                </label>
+                            </div>
+                            <span asp-validation-for="NqtEmpStatus" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="NqtIndex" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left"></i> Quay lại
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Lưu nhân viên
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

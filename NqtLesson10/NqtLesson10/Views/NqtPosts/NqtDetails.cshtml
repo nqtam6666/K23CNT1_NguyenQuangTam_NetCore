@@ -1,0 +1,42 @@
+﻿@model NqtLesson10.Models.NqtPost
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NqtPost</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtImage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NqtStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NqtStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.NqtId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

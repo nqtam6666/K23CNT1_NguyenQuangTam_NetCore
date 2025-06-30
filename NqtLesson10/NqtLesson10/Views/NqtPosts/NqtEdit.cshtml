@@ -1,0 +1,49 @@
+﻿@model NqtLesson10.Models.NqtPost
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>NqtPost</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NqtId" />
+            <div class="form-group">
+                <label asp-for="NqtTitle" class="control-label"></label>
+                <input asp-for="NqtTitle" class="form-control" />
+                <span asp-validation-for="NqtTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtImage" class="control-label"></label>
+                <input asp-for="NqtImage" class="form-control" />
+                <span asp-validation-for="NqtImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtText" class="control-label"></label>
+                <input asp-for="NqtText" class="form-control" />
+                <span asp-validation-for="NqtText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NqtStatus" class="control-label"></label>
+                <input asp-for="NqtStatus" class="form-control" />
+                <span asp-validation-for="NqtStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,70 @@
+﻿@model NguyenQuangTam_2310900093.Models.NqtEmployee
+
+@{
+    ViewData["Title"] = "Chi tiết nhân viên";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">Chi tiết nhân viên</h4>
+                    <div>
+                        <a asp-action="NqtEdit" asp-route-Nqtid="@Model?.NqtEmpId" class="btn btn-light">
+                            <i class="fas fa-edit"></i> Chỉnh sửa
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="text-muted">Tên nhân viên</label>
+                                <h5>@Html.DisplayFor(model => model.NqtEmpName)</h5>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted">Cấp bậc</label>
+                                <h5>
+                                    @if (Model.NqtEmpLevel == "Admin")
+                                    {
+                                        <span class="badge bg-primary">@Model.NqtEmpLevel</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@Model.NqtEmpLevel</span>
+                                    }
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="text-muted">Ngày bắt đầu</label>
+                                <h5>@Html.DisplayFor(model => model.NqtEmpStartDate)</h5>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted">Trạng thái</label>
+                                <h5>
+                                    @if (Model.NqtEmpStatus)
+                                    {
+                                        <span class="badge bg-success">Show</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Hide</span>
+                                    }
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-top pt-3">
+                        <a asp-action="NqtIndex" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
